@@ -15,6 +15,7 @@ from .metrics.score_model import get_score
 from .utils.pred_class import classify
 from .utils.last_neuron import last_neuron
 from .metrics.entropy import epoch_entropy
+import pdb
 
 
 class Scan:
@@ -27,6 +28,8 @@ class Scan:
                  reduction_window=None, grid_downsample=None,
                  reduction_metric='val_acc', round_limit=None,
                  talos_log_name='talos.log', debug=False):
+
+        print('######### WHY ####')
 
         self.dataset_name = dataset_name
         self.experiment_no = experiment_no
@@ -97,6 +100,8 @@ class Scan:
 
         self.epoch_entropy.append(epoch_entropy((_hr_out)))
         _hr_out = run_round_results(self, _hr_out)
+
+        # pdb.set_trace()
 
         self._val_score = get_score(self)
 

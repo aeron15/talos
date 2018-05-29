@@ -18,6 +18,8 @@ class Performance():
             self.multi_class()
         elif self.shape == 'multi_label':
             self.multi_label()
+        elif sef.shape == 'multi_label_nan':
+            self.multi_label_nan()
 
         self.trues_and_falses()
         self.f1score()
