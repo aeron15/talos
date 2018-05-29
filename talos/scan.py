@@ -101,10 +101,8 @@ class Scan:
         self.epoch_entropy.append(epoch_entropy((_hr_out)))
         _hr_out = run_round_results(self, _hr_out)
 
-        # pdb.set_trace()
-
-        # self._val_score = get_score(self)
-        self._val_score = 1890
+        self._val_score = get_score(self)
+        # self._val_score = 1890
 
         write_log(self)
         self.result.append(_hr_out)
