@@ -29,7 +29,7 @@ class Scan:
                  reduction_metric='val_acc', round_limit=None,
                  talos_log_name='talos.log', debug=False):
 
-        print('######### WHY ####')
+        print('####### RENAN SCAN ####')
 
         self.dataset_name = dataset_name
         self.experiment_no = experiment_no
@@ -103,7 +103,8 @@ class Scan:
 
         # pdb.set_trace()
 
-        self._val_score = get_score(self)
+        # self._val_score = get_score(self)
+        self._val_score = 1890
 
         write_log(self)
         self.result.append(_hr_out)
